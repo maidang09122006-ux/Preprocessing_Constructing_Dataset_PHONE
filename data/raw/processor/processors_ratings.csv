@@ -1,0 +1,235 @@
+brand,processor,rating
+Qualcomm,Snapdragon 8 Elite Gen 5,97
+Apple,A19 Pro,93
+MediaTek,Dimensity 9500,96
+Samsung,Exynos 2600,93
+Qualcomm,Snapdragon 8 Elite (Gen 4),91
+Apple,Apple A19,90
+MediaTek,Dimensity 9500s,90
+MediaTek,Dimensity 9400 Plus,89
+MediaTek,Dimensity 9400,88
+Qualcomm,Snapdragon 8 Gen 5,86
+Xiaomi,Xring O1,86
+Apple,Apple A18,83
+Samsung,Exynos 2500,78
+Apple,A18 Pro,82
+MediaTek,Dimensity 9300,78
+MediaTek,Dimensity 9400e,79
+MediaTek,Dimensity 9300 Plus,77
+Qualcomm,Snapdragon 8 Gen 3,77
+Apple,A17 Pro,76
+Qualcomm,Snapdragon 8s Gen 4,76
+Apple,A16 Bionic,73
+Samsung,Exynos 2400,72
+Samsung,Exynos 2400e,71
+MediaTek,Dimensity 8500,69
+MediaTek,Dimensity 8450,67
+Apple,A15 Bionic,66
+MediaTek,Dimensity 8400,65
+MediaTek,Dimensity 9200 Plus,63
+Qualcomm,Snapdragon 8 Gen 2,64
+MediaTek,Dimensity 9200,62
+Qualcomm,Snapdragon 8s Gen 3,62
+Qualcomm,Snapdragon 7 Plus Gen 3,61
+Apple,A14 Bionic,61
+HiSilicon,Kirin 9030 Pro,59
+MediaTek,Dimensity 8350,57
+Google,Tensor G5,58
+Google,Tensor G4,57
+MediaTek,Dimensity 9000 Plus,58
+MediaTek,Dimensity 8300,56
+Qualcomm,Snapdragon 8 Plus Gen 1,57
+Google,Tensor G3,55
+Samsung,Exynos 2200,53
+MediaTek,Dimensity 9000,55
+Apple,A13 Bionic,55
+Samsung,Exynos 1680,53
+Qualcomm,Snapdragon 8 Gen 1,52
+Qualcomm,Snapdragon 7 Plus Gen 2,51
+Qualcomm,Snapdragon 888 Plus,50
+HiSilicon,Kirin 9030S,49
+Samsung,Exynos 1580,49
+Qualcomm,Snapdragon 7 Gen 4,49
+MediaTek,Dimensity 8200,46
+Google,Tensor G2,48
+HiSilicon,Kirin 9020,47
+Google,Google Tensor,47
+Qualcomm,Snapdragon 888,47
+HiSilicon,Kirin 9000,46
+HiSilicon,Kirin 9010,46
+MediaTek,Dimensity 8100,45
+Samsung,Exynos 2100,44
+Apple,A12 Bionic,45
+Qualcomm,Snapdragon 7s Gen 4,44
+MediaTek,Dimensity 8000,44
+Qualcomm,Snapdragon 870,44
+Qualcomm,Snapdragon 6 Gen 5,43
+Qualcomm,Snapdragon 7s Gen 3,43
+Qualcomm,Snapdragon 7 Gen 3,43
+Qualcomm,Snapdragon 865 Plus,43
+HiSilicon,Kirin 8020,44
+MediaTek,Dimensity 7350,41
+Samsung,Exynos 1480,42
+MediaTek,Dimensity 8050,40
+MediaTek,Dimensity 8020,42
+Qualcomm,Snapdragon 865,43
+Qualcomm,Snapdragon 6 Gen 4,41
+MediaTek,Dimensity 7200 Ultra,41
+HiSilicon,Kirin 9000S,41
+MediaTek,Dimensity 7200,41
+MediaTek,Dimensity 1300,41
+MediaTek,Dimensity 1100,41
+MediaTek,Dimensity 1200,41
+Samsung,Exynos 990,41
+MediaTek,Dimensity 7400,40
+Qualcomm,Snapdragon 6 Gen 3,39
+Qualcomm,Snapdragon 7 Gen 1,39
+Qualcomm,Snapdragon 778G Plus,39
+MediaTek,Dimensity 1000 Plus,39
+HiSilicon,Kirin 990 (5G),39
+Qualcomm,Snapdragon 855 Plus,39
+MediaTek,Dimensity 7360,38
+Qualcomm,Snapdragon 6s Gen 4,38
+MediaTek,Dimensity 7300,38
+Qualcomm,Snapdragon 7s Gen 2,38
+Qualcomm,Snapdragon 782G,38
+Qualcomm,Snapdragon 778G,38
+Qualcomm,Snapdragon 780G,38
+Qualcomm,Snapdragon 860,38
+Qualcomm,Snapdragon 855,38
+HiSilicon,Kirin 8000,37
+MediaTek,Dimensity 7030,37
+MediaTek,Dimensity 1080,37
+Samsung,Exynos 9825,37
+Apple,A11 Bionic,35
+MediaTek,Dimensity 7100,36
+Qualcomm,Snapdragon 6 Gen 1,36
+MediaTek,Dimensity 7050,36
+Samsung,Exynos 1380,36
+MediaTek,Dimensity 920,37
+Qualcomm,Snapdragon 4 Gen 4,35
+MediaTek,Dimensity 7060,35
+MediaTek,Dimensity 1050,33
+MediaTek,Dimensity 930,35
+MediaTek,Dimensity 900,35
+Samsung,Exynos 9820,35
+HiSilicon,Kirin 980,35
+Qualcomm,Snapdragon 4 Gen 5,34
+HiSilicon,Kirin 8000A,34
+Qualcomm,Snapdragon 6s Gen 3,34
+MediaTek,Dimensity 7025,34
+MediaTek,Dimensity 7020,34
+Qualcomm,Snapdragon 4 Gen 2,34
+Unisoc,Unisoc T9100,33
+Unisoc,Unisoc T820,33
+Qualcomm,Snapdragon 695,33
+MediaTek,Dimensity 820,33
+HiSilicon,Kirin 820,33
+MediaTek,Dimensity 6500,32
+Unisoc,Unisoc T8300,32
+MediaTek,Dimensity 6400,32
+Samsung,Exynos 1330,32
+Qualcomm,Snapdragon 4 Gen 1,32
+Samsung,Exynos 1280,33
+Qualcomm,Snapdragon 765G,32
+HiSilicon,Kirin 810,32
+MediaTek,Helio G200,31
+MediaTek,Helio G100,31
+Qualcomm,Snapdragon 4s Gen 2,31
+Unisoc,Unisoc T760,31
+MediaTek,Dimensity 6300,31
+MediaTek,Dimensity 6100 Plus,31
+MediaTek,Dimensity 6080,31
+MediaTek,Dimensity 6020,31
+MediaTek,Helio G99,31
+MediaTek,Dimensity 810,31
+Qualcomm,Snapdragon 750G,30
+Qualcomm,Snapdragon 732G,31
+MediaTek,Dimensity 800U,31
+MediaTek,Dimensity 800,31
+Samsung,Exynos 980,31
+Qualcomm,Snapdragon 480 Plus,30
+MediaTek,Dimensity 700,30
+Qualcomm,Snapdragon 690,30
+Qualcomm,Snapdragon 720G,30
+Samsung,Exynos 9810,30
+Qualcomm,Snapdragon 845,31
+Qualcomm,Snapdragon 6s 4G Gen 2,29
+Qualcomm,Snapdragon 480,29
+MediaTek,Dimensity 720,29
+Qualcomm,Snapdragon 730G,30
+Qualcomm,Snapdragon 730,29
+Qualcomm,Snapdragon 685,28
+Qualcomm,Snapdragon 680,28
+MediaTek,Helio G96,28
+Qualcomm,Snapdragon 678,28
+MediaTek,Helio G95,28
+MediaTek,Helio G90,28
+MediaTek,Helio G90T,28
+Apple,A10 Fusion,28
+Qualcomm,Snapdragon 675,27
+MediaTek,Helio P95,26
+Qualcomm,Snapdragon 712,26
+HiSilicon,Kirin 970,26
+Qualcomm,Snapdragon 835,26
+Unisoc,Tiger T620,25
+MediaTek,Helio G91,25
+Qualcomm,Snapdragon 710,25
+MediaTek,Helio G92 Max,24
+Unisoc,Tiger T615,24
+MediaTek,Helio G81,24
+Unisoc,Tiger T612,24
+Unisoc,Tiger T616,24
+MediaTek,Helio G88,24
+Unisoc,Tiger T618,24
+MediaTek,Helio G85,24
+Qualcomm,Snapdragon 662,24
+MediaTek,Helio G80,24
+MediaTek,Helio G70,24
+Apple,Apple A9,24
+Qualcomm,Snapdragon 665,24
+Qualcomm,Snapdragon 670,24
+MediaTek,Helio P90,24
+Samsung,Exynos 8895,25
+Unisoc,Unisoc T606,23
+Unisoc,Tiger T610,23
+Unisoc,Tiger T700,23
+Samsung,Exynos 850,23
+Qualcomm,Snapdragon 460,23
+HiSilicon,Kirin 710F,23
+MediaTek,Helio P65,23
+Samsung,Exynos 9611,23
+HiSilicon,Kirin 710A,22
+MediaTek,Helio G35,22
+MediaTek,Helio P70,22
+HiSilicon,Kirin 710,22
+Samsung,Exynos 9610,22
+MediaTek,Helio G50,21
+MediaTek,Helio G36,21
+MediaTek,Helio G37,21
+MediaTek,Helio P60,21
+Qualcomm,Snapdragon 821,21
+Qualcomm,Snapdragon 660,21
+MediaTek,Helio P35,21
+HiSilicon,Kirin 960,21
+Samsung,Exynos 8890,21
+MediaTek,Helio G25,20
+Qualcomm,Snapdragon 439,20
+MediaTek,Helio P22,20
+Qualcomm,Snapdragon 820,20
+Samsung,Exynos 7904,20
+Qualcomm,Snapdragon 636,20
+Qualcomm,Snapdragon 632,20
+Samsung,Exynos 7884B,19
+Samsung,Exynos 7885,19
+Qualcomm,Snapdragon 630,19
+Qualcomm,Snapdragon 450,19
+MediaTek,Helio A22,19
+Qualcomm,Snapdragon 625,18
+Samsung,Exynos 7870,16
+Unisoc,Unisoc SC9863A,15
+Qualcomm,Snapdragon 430,13
+Qualcomm,Snapdragon 801,12
+Qualcomm,Snapdragon 435,12
+Qualcomm,Snapdragon 425,11
+MediaTek,MediaTek MT6737,10
