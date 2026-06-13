@@ -1,0 +1,90 @@
+/* ============================================================
+   KBRS — Spacing, radii, shadows, blur & motion
+   ============================================================ */
+
+:root {
+  /* ---- Spacing scale (4px base) ---- */
+  --sp-1:   4px;
+  --sp-2:   8px;
+  --sp-3:   12px;
+  --sp-4:   16px;
+  --sp-5:   20px;
+  --sp-6:   24px;
+  --sp-7:   28px;
+  --sp-8:   32px;
+  --sp-10:  40px;
+  --sp-12:  48px;
+  --sp-16:  64px;
+
+  /* page gutters */
+  --page-pad-x:    40px;
+  --page-pad-y:    24px;
+  --page-max-w:    1440px;
+
+  /* ---- Corner radii ---- */
+  --r-xs:    6px;    /* chip / brand-letter tile */
+  --r-sm:    7px;    /* spec chip */
+  --r-md:    10px;   /* input / button / tab */
+  --r-lg:    14px;   /* tab-list / table */
+  --r-xl:    16px;   /* metric card */
+  --r-2xl:   20px;   /* phone / content card */
+  --r-pill:  999px;  /* badges, score pills */
+
+  /* ---- Outer shadows ---- */
+  --shadow-sm:    0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md:    0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg:    0 20px 60px rgba(0, 0, 0, 0.5);
+  /* brand-tinted glow under pills / rank badges */
+  --shadow-brand: 0 4px 14px rgba(99, 102, 241, 0.40);
+  --shadow-focus: 0 0 0 4px rgba(99, 102, 241, 0.20);
+
+  /* top-edge highlight line that sits on glass cards */
+  --edge-top: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.45), transparent); /* @kind color */
+  /* faint horizontal divider used inside the brand */
+  --divider:  linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.30), transparent); /* @kind color */
+
+  /* ---- Backdrop blur ---- */
+  --blur-card:   blur(20px); /* @kind other */
+  --blur-panel:  blur(12px); /* @kind other */
+  --blur-chip:   blur(8px); /* @kind other */
+
+  /* ---- Motion ---- */
+  --ease-out:    cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1); /* @kind other */
+  --dur-fast:    0.2s; /* @kind other */
+  --dur-base:    0.25s; /* @kind other */
+  --dur-slow:    0.45s; /* @kind other */
+  --dur-bar:     1.2s;   /* @kind other */  /* score-bar fill sweep */
+
+  /* ---- Semantic aliases ---- */
+  --radius-card:   var(--r-2xl);
+  --radius-input:  var(--r-md);
+  --radius-badge:  var(--r-pill);
+}
+
+/* ---- Shared keyframes (referenced across components) ---- */
+@keyframes kbrs-slide-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes kbrs-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes kbrs-pulse {
+  0%, 100% { opacity: 0.6; }
+  50%      { opacity: 1; }
+}
+@keyframes kbrs-bar-grow {
+  from { width: 0; }
+}
+@keyframes kbrs-orb-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(80px, -60px) scale(1.06); }
+  66%      { transform: translate(-50px, 80px) scale(0.94); }
+}
+@keyframes kbrs-orb-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(-90px, 50px) scale(1.08); }
+  66%      { transform: translate(70px, -70px) scale(0.92); }
+}

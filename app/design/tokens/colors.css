@@ -1,0 +1,115 @@
+/* ============================================================
+   KBRS — Color tokens
+   Dark, glassmorphic dashboard. Near-black navy canvas, an
+   indigo→violet→magenta brand gradient, and four diagnostic
+   accent colors mapped to the KBRS score axes & price segments.
+   ============================================================ */
+
+:root {
+  /* ---- Canvas / surfaces (deep navy-black) ---- */
+  --kbrs-bg:            #030712;   /* page canvas */
+  --kbrs-bg-deep:       #02040f;   /* sidebar / deepest wells */
+  --kbrs-surface-1:     #0a1024;   /* raised panel (solid) */
+  --kbrs-surface-2:     #0d1228;   /* card body (solid) */
+  --kbrs-surface-3:     #11183a;   /* hover / elevated */
+
+  /* Glass surfaces — used with backdrop-filter: blur() */
+  --kbrs-glass-card:    rgba(13, 18, 40, 0.65);
+  --kbrs-glass-panel:   rgba(15, 20, 40, 0.70);
+  --kbrs-glass-sidebar: rgba(2, 4, 16, 0.97);
+  --kbrs-glass-chip:    rgba(255, 255, 255, 0.03);
+
+  /* ---- Hairlines & borders (cool white at low alpha) ---- */
+  --kbrs-border:        rgba(255, 255, 255, 0.065);
+  --kbrs-border-strong: rgba(255, 255, 255, 0.12);
+  --kbrs-border-faint:  rgba(255, 255, 255, 0.05);
+  --kbrs-border-brand:  rgba(99, 102, 241, 0.25);
+
+  /* ---- Text (slate ramp) ---- */
+  --kbrs-text-1:        #f1f5f9;   /* primary headings / values */
+  --kbrs-text-2:        #e2e8f0;   /* body emphasis */
+  --kbrs-text-3:        #94a3b8;   /* body / labels */
+  --kbrs-text-4:        #64748b;   /* muted / captions */
+  --kbrs-text-5:        #475569;   /* faint / metadata */
+  --kbrs-text-6:        #334155;   /* faintest / dividers-as-text */
+
+  /* ---- Brand ramp (indigo → violet → magenta) ---- */
+  --kbrs-indigo:        #6366f1;
+  --kbrs-indigo-soft:   #a5b4fc;   /* tinted text on dark */
+  --kbrs-violet:        #a855f7;
+  --kbrs-violet-soft:   #c084fc;
+  --kbrs-magenta:       #ec4899;
+  --kbrs-indigo-700:    #4f46e5;
+
+  /* Signature gradients */
+  --kbrs-grad-brand:    linear-gradient(135deg, #6366f1, #a855f7, #ec4899); /* @kind color */
+  --kbrs-grad-brand-h:  linear-gradient(90deg, #6366f1, #a855f7, #ec4899); /* @kind color */
+  --kbrs-grad-heading:  linear-gradient(135deg, #f1f5f9 0%, #a5b4fc 55%, #c084fc 100%); /* @kind color */
+  --kbrs-grad-pill:     linear-gradient(135deg, #6366f1, #a855f7); /* @kind color */
+
+  /* ---- Tinted brand washes (fills behind glass) ---- */
+  --kbrs-brand-wash:    rgba(99, 102, 241, 0.10);
+  --kbrs-brand-wash-2:  rgba(99, 102, 241, 0.18);
+  --kbrs-brand-glow:    rgba(99, 102, 241, 0.40);
+
+  /* ---- KBRS score axes (one hue per scoring dimension) ---- */
+  --kbrs-perf:          #10b981;   /* Hiệu năng / performance — emerald */
+  --kbrs-perf-soft:     #34d399;
+  --kbrs-cam:           #3b82f6;   /* Camera — blue */
+  --kbrs-cam-soft:      #60a5fa;
+  --kbrs-batt:          #f59e0b;   /* Pin / battery — amber */
+  --kbrs-batt-soft:     #fbbf24;
+  --kbrs-disp:          #8b5cf6;   /* Màn hình / display — violet */
+  --kbrs-disp-soft:     #a78bfa;
+
+  --kbrs-grad-perf:     linear-gradient(90deg, #10b981, #34d399); /* @kind color */
+  --kbrs-grad-cam:      linear-gradient(90deg, #3b82f6, #60a5fa); /* @kind color */
+  --kbrs-grad-batt:     linear-gradient(90deg, #f59e0b, #fbbf24); /* @kind color */
+  --kbrs-grad-disp:     linear-gradient(90deg, #8b5cf6, #a78bfa); /* @kind color */
+
+  /* ---- Price segments ---- */
+  --kbrs-seg-budget:    #22c55e;   /* < 5M  */
+  --kbrs-seg-mid:       #3b82f6;   /* 5–10M */
+  --kbrs-seg-high:      #f59e0b;   /* 10–20M */
+  --kbrs-seg-flagship:  #a855f7;   /* ≥ 20M */
+
+  --kbrs-seg-budget-soft:   #4ade80;
+  --kbrs-seg-mid-soft:      #60a5fa;
+  --kbrs-seg-high-soft:     #fbbf24;
+  --kbrs-seg-flagship-soft: #c084fc;
+
+  /* Segment badge fills (12% tint) + borders (20% tint) */
+  --kbrs-seg-budget-bg:     rgba(34, 197, 94, 0.12);
+  --kbrs-seg-mid-bg:        rgba(59, 130, 246, 0.12);
+  --kbrs-seg-high-bg:       rgba(245, 158, 11, 0.12);
+  --kbrs-seg-flagship-bg:   rgba(168, 85, 247, 0.12);
+
+  /* ---- Semantic status ---- */
+  --kbrs-success:       #22c55e;
+  --kbrs-warning:       #f59e0b;
+  --kbrs-danger:        #ef4444;
+  --kbrs-info:          #3b82f6;
+
+  /* ============================================================
+     Semantic aliases — prefer these in components
+     ============================================================ */
+  --surface-page:       var(--kbrs-bg);
+  --surface-sidebar:    var(--kbrs-glass-sidebar);
+  --surface-card:       var(--kbrs-glass-card);
+  --surface-panel:      var(--kbrs-glass-panel);
+  --surface-chip:       var(--kbrs-glass-chip);
+
+  --border-card:        var(--kbrs-border);
+  --border-input:       rgba(255, 255, 255, 0.07);
+  --border-hover:       var(--kbrs-border-brand);
+
+  --text-heading:       var(--kbrs-text-1);
+  --text-body:          var(--kbrs-text-3);
+  --text-muted:         var(--kbrs-text-4);
+  --text-faint:         var(--kbrs-text-5);
+  --text-on-brand:      #ffffff;
+  --text-brand:         var(--kbrs-indigo-soft);
+
+  --accent:             var(--kbrs-indigo);
+  --accent-grad:        var(--kbrs-grad-brand);
+}

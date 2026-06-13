@@ -1,0 +1,7 @@
+# KBRS Streamlit App — Dependencies
+# Install with: pip install -r app/requirements_app.txt
+
+streamlit>=1.35.0
+pandas>=2.0.0
+numpy>=1.24.0
+plotly>=5.14.0

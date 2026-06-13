@@ -12,7 +12,7 @@
 2. [Cấu trúc thư mục](#2-cấu-trúc-thư-mục)
 3. [Pipeline dữ liệu](#3-pipeline-dữ-liệu)
 4. [Cài đặt môi trường](#4-cài-đặt-môi-trường)
-5. [Hướng dẫn chạy theo thứ tự](#5-hướng-dẫn-chạy-theo-thứ-tự)
+5. [Hướng dẫn chạy theo thứ tự](#5-hướng-dẫn-chạy-theo-thứ-tự) (bao gồm web app)
 6. [Mô tả dữ liệu](#6-mô-tả-dữ-liệu)
 7. [Kết quả chính](#7-kết-quả-chính)
 8. [Lưu ý kỹ thuật](#8-lưu-ý-kỹ-thuật)
@@ -64,6 +64,16 @@
 │   └── KBRS/
 │       ├── kbrs_scoring.ipynb         # Bước 3: Tính điểm KBRS
 │       └── kbs_engine.ipynb           # Bước 4: Engine gợi ý
+│
+├── app/
+│   ├── app.py                     # Streamlit web app (KBRS UI)
+│   ├── generate_phones_data.py    # Tạo phones_data.js từ scored_data.csv
+│   ├── requirements_app.txt
+│   └── design/
+│       ├── _ds_bundle.js          # React component bundle (compiled)
+│       ├── assets/data/phones_data.js  # Dữ liệu cho frontend (generated)
+│       ├── tokens/                # CSS design tokens
+│       └── ui_kits/recommendation/ # JSX source screens
 │
 ├── requirements.txt
 ├── CODE_BOOK.md             # Từ điển dữ liệu cho scored_data.csv
@@ -143,7 +153,7 @@ pip install -r requirements.txt
 ```bash
 python notebooks/data_collection/get_product_links_final.py
 python notebooks/data_collection/crawl_data.py
-python notebooks/data_collection/crawl_phone_rating
+python notebooks/data_collection/crawl_phone_rating.py
 python notebooks/data_collection/crawl_processors.py
 ```
 
@@ -169,6 +179,21 @@ Mở và chạy toàn bộ: `notebooks/KBRS/kbrs_scoring.ipynb`
 
 Mở và chạy: `notebooks/KBRS/kbs_engine.ipynb`
 
+### Bước 5 — Chạy Web App (tùy chọn)
+
+```bash
+# Cài dependencies riêng cho web app
+pip install -r app/requirements_app.txt
+
+# (Nếu scored_data.csv thay đổi) Tạo lại phones_data.js
+python app/generate_phones_data.py
+
+# Khởi động Streamlit
+streamlit run app/app.py
+```
+
+Mở trình duyệt tại `http://localhost:8501`
+
 ---
 
 ## 6. Mô tả dữ liệu
@@ -190,20 +215,21 @@ Xem chi tiết từng cột tại: [CODE_BOOK.md](CODE_BOOK.md)
 
 ## 7. Kết quả chính
 
-**10 use-case profiles được hỗ trợ:**
+**11 use-case profiles được hỗ trợ:**
 
 | Use Case | Mô tả | Hard Filters |
 |---|---|---|
-| Gia_Re | Giá rẻ nhất trong ngân sách | — |
-| Flagship | Hiệu năng tổng thể cao nhất | — |
+| Can_Bang | Cân bằng mọi tiêu chí | — |
+| Gia_Re | Giá rẻ nhất trong ngân sách | price_segment = budget |
+| Flagship | Hiệu năng tổng thể cao nhất | price_segment = flagship |
 | Lien_Lac_Co_Ban | Liên lạc cơ bản | — |
-| Choi_Game | Gaming | score_perf >= 5.5, RAM >= 8GB, 120Hz |
-| Giai_Tri_MXH | Giải trí mạng xã hội | display_tier >= 3 |
-| Chup_Hinh_Quay_Phim | Chụp hình & quay phim | score_cam >= 8, video_rank >= 4, storage >= 256GB |
+| Choi_Game | Gaming | score_perf >= 5.8, RAM >= 8GB, refresh >= 120Hz |
+| Giai_Tri_MXH | Giải trí & mạng xã hội | display_tier >= 3 |
+| Chup_Hinh | Chụp hình | score_cam >= 7.7, storage >= 128GB, rear_cam >= 48MP, front_cam >= 12MP |
+| Quay_Phim | Quay phim | score_cam >= 7.7, storage >= 256GB, video_rank >= 4, fps >= 30 |
 | Pin_Trau_Sac_Nhanh | Pin lớn & sạc nhanh | battery >= 6000mAh, fast_charge >= 33W |
 | Nho_Gon_Nhe_Tay | Nhỏ gọn nhẹ tay | weight_tier = 1 (< 185g) |
-| Khang_Nuoc | Kháng nước | ip_status = 1 |
-| Bat_Ky | Cân bằng mọi tiêu chí | — |
+| Khang_Nuoc | Kháng nước chuẩn IP | ip_status = 1 |
 
 ---
 

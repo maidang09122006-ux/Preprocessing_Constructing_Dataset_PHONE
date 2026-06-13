@@ -1,0 +1,14 @@
+/* ============================================================
+   KBRS — Webfonts
+   Outfit (display + body) and JetBrains Mono (numeric/spec mono)
+   are loaded from Google Fonts, exactly as the source app does:
+     fonts.googleapis.com/css2?family=Outfit:wght@300..900
+
+   NOTE: These are loaded over the network from Google Fonts. If
+   you need a fully offline / self-hosted design system, download
+   the Outfit + JetBrains Mono woff2 binaries, drop them in
+   tokens/fonts/, and replace the @import lines below with
+   @font-face rules pointing at the local files.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap");

@@ -1,0 +1,75 @@
+<!-- @dsCard group="Recommendation" viewport="1380x900" name="KBRS Dashboard — full app" subtitle="Sidebar filters → ranked recommendations, with EDA & Dataset tabs" -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>KBRS — Gợi ý điện thoại</title>
+<link rel="stylesheet" href="../../styles.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="../../assets/data/phones_data.js"></script>
+<style>
+  html, body { margin: 0; min-height: 100vh; background: var(--surface-page); }
+  #root { position: relative; z-index: 1; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="shell.jsx"></script>
+<script type="text/babel" src="reco-screen.jsx"></script>
+<script type="text/babel" src="eda-screen.jsx"></script>
+<script type="text/babel" src="dataset-screen.jsx"></script>
+<script type="text/babel" data-presets="react">
+  function App() {
+    const { TabBar } = window.KBRSDesignSystem_5964c9;
+    const { OrbBackground, Sidebar } = window.KBRSShell;
+    const { RecoScreen } = window.KBRSRecoScreen;
+    const { EdaScreen } = window.KBRSEdaScreen;
+    const { DatasetScreen } = window.KBRSDatasetScreen;
+
+    const [tab, setTab] = React.useState("reco");
+    const [selected, setSelected] = React.useState(["Choi_Game"]);
+    const [budget, setBudget] = React.useState(20);
+    const [topK, setTopK] = React.useState(5);
+
+    const toggle = (id) => setSelected((s) =>
+      s.includes(id) ? s.filter((x) => x !== id) : [...s, id]);
+
+    return (
+      <div>
+        <OrbBackground />
+        <div style={{ display: "flex", minHeight: "100vh", position: "relative", zIndex: 1 }}>
+          <Sidebar usecases={window.KBRS_USECASES} selected={selected} onToggle={toggle}
+            budget={budget} onBudget={setBudget} topK={topK} onTopK={setTopK} />
+          <main style={{ flex: 1, padding: "24px 40px 64px", maxWidth: 1180, margin: "0 auto", width: "100%" }}>
+            <div style={{ marginBottom: 24 }}>
+              <TabBar value={tab} onChange={setTab} tabs={[
+                { id: "reco", label: "Gợi ý", icon: "fa-solid fa-wand-magic-sparkles" },
+                { id: "eda",  label: "EDA Explorer", icon: "fa-solid fa-chart-column" },
+                { id: "data", label: "Dataset", icon: "fa-solid fa-table" },
+              ]} />
+            </div>
+            {tab === "reco" && <RecoScreen selected={selected} budget={budget} topK={topK} />}
+            {tab === "eda"  && <EdaScreen />}
+            {tab === "data" && <DatasetScreen />}
+          </main>
+        </div>
+      </div>
+    );
+  }
+
+  function mount() {
+    if (!window.KBRSDesignSystem_5964c9 || !window.KBRS_PHONES ||
+        !window.KBRSShell || !window.KBRSRecoScreen || !window.KBRSEdaScreen || !window.KBRSDatasetScreen) {
+      return setTimeout(mount, 40);
+    }
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  }
+  mount();
+</script>
+</body>
+</html>

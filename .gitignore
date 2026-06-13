@@ -1,2 +1,9 @@
-_pycache_/
+__pycache__/
+*.pyc
+*.pyo
 venv/
+.env
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+*.egg-info/

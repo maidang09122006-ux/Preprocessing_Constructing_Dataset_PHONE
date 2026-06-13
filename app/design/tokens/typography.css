@@ -1,0 +1,58 @@
+/* ============================================================
+   KBRS — Typography tokens
+   Single typeface: Outfit (geometric sans, 300–900). Used for
+   everything from 900-weight gradient display headings down to
+   600-weight uppercase eyebrow labels with wide tracking.
+   ============================================================ */
+
+/* Webfonts are declared in fonts.css (Outfit + JetBrains Mono, Google Fonts). */
+
+:root {
+  /* ---- Families ---- */
+  --kbrs-font-sans: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --kbrs-font-mono: "JetBrains Mono", "SF Mono", ui-monospace, "Cascadia Code", monospace;
+
+  --font-display: var(--kbrs-font-sans);
+  --font-body:    var(--kbrs-font-sans);
+  --font-mono:    var(--kbrs-font-mono);
+
+  /* ---- Weights ---- */
+  --fw-light:     300; /* @kind font */
+  --fw-regular:   400; /* @kind font */
+  --fw-medium:    500; /* @kind font */
+  --fw-semibold:  600; /* @kind font */
+  --fw-bold:      700; /* @kind font */
+  --fw-extrabold: 800; /* @kind font */
+  --fw-black:     900; /* @kind font */
+
+  /* ---- Type scale (px) ---- */
+  --fs-display:   42px;  /* hero gradient heading */
+  --fs-h1:        32px;  /* page title */
+  --fs-h2:        24px;  /* section title / metric value */
+  --fs-h3:        20px;  /* card title */
+  --fs-lg:        16px;  /* lead / phone name */
+  --fs-base:      14px;  /* body / tab label */
+  --fs-sm:        13px;  /* secondary */
+  --fs-xs:        12px;  /* chips / captions */
+  --fs-2xs:       11px;  /* eyebrow labels / badges */
+
+  /* ---- Line heights ---- */
+  --lh-tight:     1.15; /* @kind font */
+  --lh-snug:      1.3; /* @kind font */
+  --lh-normal:    1.5; /* @kind font */
+  --lh-relaxed:   1.65; /* @kind font */
+
+  /* ---- Letter spacing ---- */
+  --ls-tighter:   -0.03em;  /* @kind font */  /* big display numbers */
+  --ls-tight:     -0.02em;  /* @kind font */  /* headings */
+  --ls-normal:    0; /* @kind font */
+  --ls-wide:      0.05em;   /* @kind font */  /* badges */
+  --ls-wider:     0.08em;   /* @kind font */  /* metric labels */
+  --ls-widest:    0.12em;   /* @kind font */  /* eyebrow / brand caption */
+
+  /* ---- Semantic aliases ---- */
+  --text-display-size:   var(--fs-display);
+  --text-display-weight: var(--fw-black);
+  --text-eyebrow-size:   var(--fs-2xs);
+  --text-eyebrow-weight: var(--fw-semibold);
+}
